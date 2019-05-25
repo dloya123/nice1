@@ -91,6 +91,18 @@ Resources:
         Subnets: !GetAtt VPC.Outputs.Subnets
         VpcId: !GetAtt VPC.Outputs.VpcId
 
+  DeploymentPipeline:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub "https://s3.amazonaws.com/${TemplateBucket}/templates/deployment-pipeline.yaml"
+      Parameters:
+        Cluster: !GetAtt Cluster.Outputs.ClusterName
+        Service: !GetAtt Service.Outputs.Service
+        GitHubUser: !Ref GitHubUser
+        GitHubToken: !Ref GitHubToken
+        GitHubRepo: !Ref GitHubRepo
+        GitHubBranch: !Ref GitHubBranch
+
   LoadBalancer:
     Type: AWS::CloudFormation::Stack
     Properties:
