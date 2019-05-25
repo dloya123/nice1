@@ -98,7 +98,7 @@ Resources:
       ContainerDefinitions:
         - Name: simple-app
 #          Image: docker.io/tiangolo/uwsgi-nginx-flask:python3.7
-          Image: docker.io/dloya123/myimage:latest
+          Image: docker.io/dloya123/myimage:sec
           Essential: true
           Memory: 256
           PortMappings:
