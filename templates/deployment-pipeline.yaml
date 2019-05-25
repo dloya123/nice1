@@ -166,7 +166,7 @@ Resources:
                 Repo: !Ref GitHubRepo
                 Branch: !Ref GitHubBranch
                 OAuthToken: !Ref GitHubToken
-		PollForSourceChanges: true
+                PollForSourceChanges: true
               OutputArtifacts:
                 - Name: App
               RunOrder: 1
