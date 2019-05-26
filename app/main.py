@@ -4,9 +4,9 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "David Hello World from Flask"
-@app.route("/david")
-def david():
-    return "Hello, david"
+#@app.route("/david")
+#def david():
+#    return "Hello, david"
 
 if __name__ == "__main__":
     # Only for debugging while developing
