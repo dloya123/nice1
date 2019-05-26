@@ -1,3 +1,4 @@
+########
 # ECS Reference Architecture: Continuous Deployment
 
 The ECS Continuous Deployment reference architecture demonstrates how to achieve
